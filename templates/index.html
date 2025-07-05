@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sentiment Meter</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="input-container">
+      <textarea
+        type="text"
+        id="text-input"
+        placeholder="Type your text here.."
+      ></textarea>
+      <button id="analyze-btn">Analyze</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+    <div class="sentiment-meter">
+      <div class="meter-arc">
+        <div class="segments-wrapper">
+          <div class="segment segment-sad"></div>
+          <div class="segment segment-neutral"></div>
+          <div class="segment segment-happy"></div>
+        </div>
+        <span class="emoji sad">😢</span>
+        <span class="emoji neutral">😐</span>
+        <span class="emoji happy">😄</span>
+        <div class="needle"></div>
+      </div>
+      <div class="sentiment-result">Sentiment: Neutral</div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
